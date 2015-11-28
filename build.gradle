@@ -1,0 +1,27 @@
+group 'docker-world'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE")
+    }
+}
+
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.2.7.RELEASE'
+}
